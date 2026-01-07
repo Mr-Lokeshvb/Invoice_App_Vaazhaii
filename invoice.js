@@ -121,7 +121,7 @@ const invoiceNo = window.manualInvoiceNo || getInvoiceNo();
       "A-15, Kattabomman Street, Rayon Nagar",
       "Sirumugai, Mettupalayam",
       "Coimbatore - 641302",
-      "Phone: +91 9488844216",
+      "Phone: +91 9488844216, +91 8778340373",
       "Email: vaazhaii.foods@gmail.com",
       "GSTIN: 33BNPPL2356F1ZZ",
       "FSSAI: 30251119122239652"
@@ -255,5 +255,6 @@ window.manualInvoiceNo = null;
     doc.save(invoiceNo + ".pdf");
   };
 }
+
 
 
