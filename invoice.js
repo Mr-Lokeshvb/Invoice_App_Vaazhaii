@@ -8,9 +8,14 @@ function saveInvoiceData(invoiceNo, data) {
 
 
  function resetInvoiceCounter() {
-   localStorage.setItem('invoiceCounter', '0'); // next generated invoice will be 0001
-   alert('Invoice counter has been reset. Next invoice will start from 0001.');
- }
+  if (confirm("Are you sure you want to reset the invoice number to start from 1?")) {
+    localStorage.removeItem('invoiceCounter'); // clear the counter
+    alert("Invoice number reset! Next invoice will start from 0001.");
+    // Optional: update display if you have a current invoice number shown
+    const currentInvoiceSpan = document.getElementById('currentInvoice');
+    if(currentInvoiceSpan) currentInvoiceSpan.innerText = 'VZ-0001';
+  }
+}
 
 
 // Load invoice JSON back into HTML
@@ -250,4 +255,5 @@ window.manualInvoiceNo = null;
     doc.save(invoiceNo + ".pdf");
   };
 }
+
 
