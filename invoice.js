@@ -7,10 +7,10 @@ function saveInvoiceData(invoiceNo, data) {
 }
 
 
-// function resetInvoiceCounter() {
-//   localStorage.setItem('invoiceCounter', '0'); // next generated invoice will be 0001
-//   alert('Invoice counter has been reset. Next invoice will start from 0001.');
-// }
+ function resetInvoiceCounter() {
+   localStorage.setItem('invoiceCounter', '0'); // next generated invoice will be 0001
+   alert('Invoice counter has been reset. Next invoice will start from 0001.');
+ }
 
 
 // Load invoice JSON back into HTML
@@ -250,3 +250,4 @@ window.manualInvoiceNo = null;
     doc.save(invoiceNo + ".pdf");
   };
 }
+
